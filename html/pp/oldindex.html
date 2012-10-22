@@ -1,0 +1,15 @@
+<html>
+<head>
+    <script type="text/javascript">
+	var timezoneOffsetHours = new Date().getTimezoneOffset() / 60;
+	var url;
+
+	if(timezoneOffsetHours > 0){
+		url = 'http://spathiwa.com/cgi-bin/tz_mpp3.pl?-'+timezoneOffsetHours;
+	}else{
+		
+		url = 'http://spathiwa.com/cgi-bin/tz_mpp3.pl?'+Math.abs(timezoneOffsetHours);
+	}
+	this.document.location.href = url;
+	</script>
+</html>
