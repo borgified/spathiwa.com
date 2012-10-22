@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
@@ -7,7 +7,6 @@
     <title>Fwiffo's Homepage</title>
 <meta name="google-site-verification" content="Y_kDlGegoAa-OHytrc8EiFIO7_Okoc0siliEm8z9480" >
 	<style type="text/css">
-	<!--
 	body {
 		font-family: 'Ubuntu', sans-serif;
 	}
@@ -82,7 +81,7 @@ pageTracker._trackPageview();
 } catch(err) {}
 </script>
 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 </script>
 
   </body>
