@@ -64,10 +64,14 @@ $rand=rand(0,count($imgarray)-1);
 
 
 <table>
-<tr><td><a href="cgi-bin/playerbase_predictor/pp.pl"><img src="/img/fanbase.jpg" height="150" width="300" alt="playerbase predictor"></a></td><td></td><td></td></tr>
+<tr><td><a href="cgi-bin/playerbase_predictor/pp.pl"><img src="/img/fanbase.jpg" height="150" width="300" alt="playerbase predictor" usemap="#ppmap"></a></td><td></td><td></td></tr>
 </table>
 
-
+<map name="ppmap">
+	<area shape="rect" coords="0,0,100,150" href="cgi-bin/playerbase_predictor/pp.pl" alt="table format">
+	<area shape="rect" coords="100,0,200,150" href="pp/" alt="adj @ input">
+	<area shape="rect" coords="200,0,300,150" href="cgi-bin/playerbase_predictor/tz_mpp2.pl" alt="centered @ sg time">
+</map>
 
 <div style="position:absolute; bottom:0; right:0;">
     <a href="http://validator.w3.org/check?uri=referer"><img
