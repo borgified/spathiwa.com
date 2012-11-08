@@ -55,9 +55,19 @@ $rand=rand(0,count($imgarray)-1);
 <div style="float:right">
 <a class="twitter-timeline" data-dnt=true href="https://twitter.com/AllegNotifier" data-widget-id="245395899155628032">Tweets by @AllegNotifier</a>
 </div>
-<h1>Fwiffo's Homepage</h1>
+<h1>Fwiffo's Webapps</h1>
 
-10/22/2011 - spathiwa.com is transitioning to the new ACSS. check back soon.
+<h3>Updates</h3>
+10/22/2012 - spathiwa.com is transitioning to the new ACSS. check back soon.<br>
+11/01/2012 - @allegnotifier, for notifications via twitter is back online!<br>
+11/07/2012 - playerbase predictor returns! (click the picture below)<br>
+
+
+<table>
+<tr><td><a href="cgi-bin/playerbase_predictor/pp.pl"><img src="/img/fanbase.jpg" height="150" width="300" alt="playerbase predictor"></a></td><td></td><td></td></tr>
+</table>
+
+
 
 <div style="position:absolute; bottom:0; right:0;">
     <a href="http://validator.w3.org/check?uri=referer"><img
