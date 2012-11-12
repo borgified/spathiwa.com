@@ -1,1 +1,1 @@
-/home/ubuntu/scripts/github/pm_inactives/pm_mech.pl
+../../scripts/pm_inactives/pm_mech.pl
