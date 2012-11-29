@@ -58,10 +58,10 @@ $rand=rand(0,count($imgarray)-1);
 <h1>Fwiffo's Webapps</h1>
 
 <h3>Updates</h3>
-10/22/2012 - spathiwa.com is transitioning to the new ACSS. check back soon.<br>
-11/01/2012 - @allegnotifier, for notifications via twitter is back online!<br>
+11/13/2012 - PM inactives app v1.03 released (for squad leadership only)<br>
 11/07/2012 - playerbase predictor returns! (click the picture below)<br>
-
+11/01/2012 - @allegnotifier, for notifications via twitter is back online!<br>
+10/22/2012 - spathiwa.com is transitioning to the new ACSS. check back soon.<br>
 
 <table>
 <tr><td><a href="cgi-bin/playerbase_predictor/pp.pl"><img src="/img/fanbase.jpg" height="150" width="300" alt="playerbase predictor" usemap="#ppmap"></a></td><td></td><td></td></tr>
