@@ -57,11 +57,21 @@ $rand=rand(0,count($imgarray)-1);
 </div>
 <h1>Fwiffo's Webapps</h1>
 
+
+<li><a href="cgi-bin/pkmud/ui/step1.pl">pkmud's db browser</a>
+
+
+
 <h3>Updates</h3>
+01/20/2013 - pkmud db browser online!
+11/29/2012 - to make full use of @allegnotifier, allow for <a href="https://support.twitter.com/articles/20169887-how-to-use-push-notifications">push notifications</a> (detailed <a href="/allegnotifier_howto/121129.html">step by step instructions</a>)</br>
+11/28/2012 - PM inactives patched so @PK and @NI can use it too<br>
+11/22/2012 - PM inactives added exsquadded feature<br>
 11/13/2012 - PM inactives app v1.03 released (for squad leadership only)<br>
 11/07/2012 - playerbase predictor returns! (click the picture below)<br>
 11/01/2012 - @allegnotifier, for notifications via twitter is back online!<br>
 10/22/2012 - spathiwa.com is transitioning to the new ACSS. check back soon.<br>
+
 
 <table>
 <tr><td><a href="cgi-bin/playerbase_predictor/pp.pl"><img src="/img/fanbase.jpg" height="150" width="300" alt="playerbase predictor" usemap="#ppmap"></a></td><td></td><td></td></tr>
