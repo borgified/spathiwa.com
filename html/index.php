@@ -16,9 +16,6 @@
 
   <body>
 
-<div>
-<div style="float:left">
-
 <?php
 
 $dir=opendir("img/fwiffo/");
@@ -39,22 +36,10 @@ $rand=rand(0,count($imgarray)-1);
 
     if($rand >= 0)
     {
-    echo '<img src="img/fwiffo/'.$imgarray[$rand].'" alt="fwiffo was here" height=200 width=200>';
+    echo '<img src="img/fwiffo/'.$imgarray[$rand].'" alt="fwiffo was here" height=150 width=150>';
     }
 ?>
-</div>
 
-
-<div style="float:right">
-<a href="http://www.youtube.com/user/borgified1"><img style="float:left; border-style:none;" src="img/youtube.gif" alt="fwiffo's youtube channel"></a>
-<a href="http://thegamersoffice.com/alleg/cadet/afslandingalt.html"><img style="float:left; border-style:none;" src="img/afs.png" alt="allegiance flight school"></a>
-</div>
-</div>
-
-<div style="clear:both;"></div>
-<div style="float:right">
-<a class="twitter-timeline" data-dnt=true href="https://twitter.com/AllegNotifier" data-widget-id="245395899155628032">Tweets by @AllegNotifier</a>
-</div>
 <h1>Fwiffo's Webapps</h1>
 
 
@@ -63,6 +48,7 @@ $rand=rand(0,count($imgarray)-1);
 
 
 <h3>Updates</h3>
+01/21/2013 - opening a new chapter: archived old <a href="oldindex.php">index page</a><br>
 01/20/2013 - pkmud db browser online!<br>
 11/29/2012 - to make full use of @allegnotifier, allow for <a href="https://support.twitter.com/articles/20169887-how-to-use-push-notifications">push notifications</a> (detailed <a href="/allegnotifier_howto/121129.html">step by step instructions</a>)<br>
 11/28/2012 - PM inactives patched so @PK and @NI can use it too<br>
@@ -72,16 +58,6 @@ $rand=rand(0,count($imgarray)-1);
 11/01/2012 - @allegnotifier, for notifications via twitter is back online!<br>
 10/22/2012 - spathiwa.com is transitioning to the new ACSS. check back soon.<br>
 
-
-<table>
-<tr><td><a href="cgi-bin/playerbase_predictor/pp.pl"></a><img src="/img/fanbase.jpg" height="150" width="300" alt="playerbase predictor" usemap="#ppmap"></td><td></td><td></td></tr>
-</table>
-
-<map name="ppmap">
-	<area shape="rect" coords="0,0,100,150" href="cgi-bin/playerbase_predictor/pp.pl" alt="table format">
-	<area shape="rect" coords="100,0,200,150" href="pp/" alt="adj @ input">
-	<area shape="rect" coords="200,0,300,150" href="cgi-bin/playerbase_predictor/tz_mpp2.pl" alt="centered @ sg time">
-</map>
 
 <div style="position:absolute; bottom:0; right:0;">
     <a href="http://validator.w3.org/check?uri=referer"><img
