@@ -50,6 +50,7 @@ $rand=rand(0,count($imgarray)-1);
 
 
 <h3>Updates</h3>
+02/24/2013 - added star control ringtones<br>
 01/21/2013 - opening a new chapter: archived old <a href="oldindex.php">index page</a><br>
 01/20/2013 - pkmud db browser online!<br>
 11/29/2012 - to make full use of @allegnotifier, allow for <a href="https://support.twitter.com/articles/20169887-how-to-use-push-notifications">push notifications</a> (detailed <a href="/allegnotifier_howto/121129.html">step by step instructions</a>)<br>
