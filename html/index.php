@@ -40,10 +40,10 @@ $rand=rand(0,count($imgarray)-1);
     }
 ?>
 
-<h1>Fwiffo's Webapps</h1>
+<h1>Fwiffo's Hideout</h1>
 
-
-<a href="cgi-bin/pkmud/ui/step1.pl">pkmud's db browser</a>
+<a href="jenkins/ci.html">Jenkins CI for Assimilation Monitoring Project</a>
+<br><a href="cgi-bin/pkmud/ui/step1.pl">pkmud's db browser</a>
 
 <h3>Downloads</h3>
 <a href="https://github.com/borgified/starcontrol-ringtones">Star Control ringtones for your iPhone</a>

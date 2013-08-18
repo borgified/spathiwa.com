@@ -1,0 +1,107 @@
+<html>
+<head>
+<link href="../css/jenkins.css" rel="stylesheet" type="text/css">
+</head>
+This is my CI setup with a farm of virtual machines powered by VMware.<br>
+<img src="http://s14.postimg.org/6n01kk7e9/screenshot_5.png"></img><br>
+<img src="http://s14.postimg.org/3y58uj1wx/screenshot_6.png"></img><br>
+
+<h3>Main goals</h3>
+<li>use VM snapshot technology to revert worker nodes back to "clean" state prior to build
+
+<h3>Next steps</h3>
+<li>replicate this environment to an external setup so that builds can be triggered by commit hooks directly from mercurial
+
+<h3>Jenkins config</h3>
+<ul>
+	<li>add vmware plugin
+	<li>assimmon project script
+<pre>
+#no automatic upgrades (dpkg-reconfigure unattended-upgrades)
+#sudo visudo
+#install vmtools
+#install jdk
+#create snapshot 'clean'
+
+cat /etc/issue
+uname -a
+sudo apt-get update
+sudo apt-get install -y doxygen valgrind libpcap-dev mercurial python-pip cmake build-essential pkg-config libglib2.0-dev
+hg clone 'http://hg.linux-ha.org/%7Cexperimental/assimilation/'
+sudo pip install testify ctypesgen py2neo==1.4.5 tornado
+pip freeze
+
+wget -O - http://debian.neo4j.org/neotechnology.gpg.key | sudo apt-key add -
+# Create an Apt sources.list file
+
+echo 'deb http://debian.neo4j.org/repo stable/' | sudo tee /etc/apt/sources.list.d/neo4j.list
+# Find out about the files in our repository
+sudo apt-get update -qq
+# Install Neo4j, community edition
+sudo apt-get install -qq neo4j
+# start neo4j server, available at http://localhost:7474 of the target machine
+#sudo service neo4j-service stop
+#sudo service neo4j-service start
+
+cd assimilation
+hg summary
+cd ..
+
+mkdir root_of_binary_tree
+cd root_of_binary_tree
+cmake ../assimilation
+cpack
+sudo dpkg -i assimilation-nanoprobe*.deb
+/usr/share/assimilation/discovery_agents/netconfig
+cd testcode
+sudo ../../assimilation/testcode/grind.sh
+cd ../../assimilation/cma
+testify tests
+../../root_of_binary_tree/testcode/pinger ::1
+</pre>
+</ul>
+
+<h3>Worker setup</h3>
+<ol>
+	<li>install stock Ubuntu OS
+	<li>install vmware tools
+	<li>i like vi
+<pre>
+sudo update-alternatives --config editor
+</pre>
+	<li>no automatic updates to OS
+<pre>
+sudo dpkg-reconfigure unattended-upgrades
+</pre>
+	<li>give ingresuser the ability to sudo w/o password and not require a tty
+<pre>
+sudo visudo
+ingresuser ALL=NOPASSWD:ALL
+Defaults:ingresuser !requiretty
+</pre>
+	<li>install latest jdk
+<pre>
+cd /etc/apt/sources.list.d
+vi webupd8team-java-precise.list
+deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main
+deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu precise main
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C2518248EEA14886
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+</pre>
+	<li>make use of apt-cacher proxy <a href="/apt-cacher/setup.html">setup</a>
+<pre>
+vi /etc/apt/apt.conf
+Acquire::http::Proxy "http://apt-cacher:3142";
+</pre>
+	<li>sync clock to a common timesource
+<pre>
+sudo ntpdate 10.3.12.1
+sudo apt-get install ntp
+</pre>
+	<li>take a snapshot of the VM and name it "clean"
+
+</ol>
+
+</html>
