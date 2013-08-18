@@ -73,13 +73,13 @@ sudo update-alternatives --config editor
 <pre>
 sudo dpkg-reconfigure unattended-upgrades
 </pre>
-	<li>give ingresuser the ability to sudo w/o password and not require a tty
+	<li>give ingresuser (user created at start, has sudo access by default) the ability to sudo w/o password and not require a tty
 <pre>
 sudo visudo
 ingresuser ALL=NOPASSWD:ALL
 Defaults:ingresuser !requiretty
 </pre>
-	<li>install latest jdk
+	<li>install latest jdk (this is required by jenkins)
 <pre>
 cd /etc/apt/sources.list.d
 vi webupd8team-java-precise.list
@@ -90,7 +90,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C2518248EEA14886
 sudo apt-get update
 sudo apt-get install oracle-java7-installer
 </pre>
-	<li>make use of apt-cacher proxy <a href="/apt-cacher/setup.html">setup</a>
+	<li>make use of apt-cacher proxy <a href="/apt-cacher/setup.html">setup</a> (speeds things up)
 <pre>
 vi /etc/apt/apt.conf
 Acquire::http::Proxy "http://apt-cacher:3142";
